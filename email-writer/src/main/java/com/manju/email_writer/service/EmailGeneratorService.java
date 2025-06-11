@@ -46,7 +46,7 @@ public class EmailGeneratorService {
     private String extractResponseContent(String response) {
         try{
             ObjectMapper mapper = new ObjectMapper();
-            //readTree() is used to convert Json response to tree like structure
+            //readTree() is used to convert JSON response to tree like structure
            JsonNode rootNode= mapper.readTree(response);
            return rootNode.path("candidates")
                    .get(0)

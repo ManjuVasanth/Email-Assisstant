@@ -2,14 +2,14 @@ package com.manju.email_writer.controller;
 
 import com.manju.email_writer.model.EmailRequest;
 import com.manju.email_writer.service.EmailGeneratorService;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/key")
+@AllArgsConstructor
+@CrossOrigin(origins="*")
 public class EmailGeneratorController {
 
     private final EmailGeneratorService emailGeneratorService;
